@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	//input
+	cout << "Dynamic Exercises: "; int n; cin >> n;
+	cout << "Static  Exercises: "; int m; cin >> m;
+	
+	cout << "====================" << endl;
+	cout << "Dynamic Input: " << endl;
+	cout << "====================" << endl;
+	
+	//counting
+	int weightTotal = 0;
+	for (int i = 0; i < n; i++) {
+		cout << "Exercise " << i + 1 << endl;
+		
+		cout << "BW  : "  ; int BW; cin >> BW;
+		cout << "Reps: "; int reps; cin >> reps;
+		cout << "Sets: "; int sets; cin >> sets;
+		cout << endl;
+		
+		weightTotal += (50 + BW) * reps * sets;	
+	}
+	
+	cout << "====================" << endl;
+	cout << "Static  Input: " << endl;
+	cout << "====================" << endl;
+	
+	int timeTotal = 0;
+	for (int i = 0; i < m; i++) {
+		cout << "Exercise " << i + 1 << endl;
+		
+		cout << "BW  : "  ; int BW; cin >> BW;
+		cout << "Secs: "; int secs; cin >> secs;
+		cout << "Sets: "; int sets; cin >> sets;
+		cout << endl;
+		
+		timeTotal += (50 + BW) * secs * sets;	
+	}
+	
+	cout << "weight total: " << weightTotal << endl;
+	cout << "time total  : " << timeTotal << endl;
+}
